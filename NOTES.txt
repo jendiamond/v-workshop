@@ -1,0 +1,21 @@
+https://slides.com/hootlex/1-vuejs-fundamentals-workshop-get-started-with-vue?token=1otN5Kmx
+
+https://github.com/hootlex
+Claire Oklahoma coding dojo teacher
+Greg Dallas web dev studio 
+Craig UK Cornwall helicopter pilot https://helicrewmanager.com/
+Reese Graham Lake Tahoe SanFran consultant biology & comp sci - Python
+
+<div id="app"><div>
+  {{message}}
+</div>
+<script>
+  new Vue({
+    el: #hello
+    data: {
+     sunny: true
+    }
+  })
+  </script>
+Reactivity System
+v-model directive 2 way data binding

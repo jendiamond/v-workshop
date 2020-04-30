@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div id="app">
+    <p>Hello {{message}}</p>
+    {{message}}
+    <input v-model='message' placeholder='edit me'>
+    <p v-if="animal=='dog'">Dog goes woof!</p>
+    <p v-else-if="animal=='cat'">Cat goes MEOW!</p>
+    <p v-else >'What does the {{ animal }} say?'</p>
+  </div>
+
+  <script>
+    new Vue({
+      el: '#app',
+      data: {
+        message: 'Hello world',
+        animal: "llama"
+      }
+    })
+  </script>
+</body>
+</html>
