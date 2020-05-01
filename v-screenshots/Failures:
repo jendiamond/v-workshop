@@ -1,0 +1,52 @@
+Failures:
+
+  1) HomePageHelper#link_to_featured_work when the record doesn't exist returns a link to the search results
+     Failure/Error: search_catalog_path(search_field: 'all_fields', q: '')
+     
+     NoMethodError:
+       undefined method `search_catalog_path' for #<#<Class:0x000055c29c180d30>:0x000055c29c180998>
+       Did you mean?  search_state
+     # ./app/helpers/home_page_helper.rb:19:in `blank_search_path'
+     # ./app/helpers/home_page_helper.rb:13:in `link_to_featured_work'
+     # ./spec/helpers/home_page_helper_spec.rb:10:in `block (3 levels) in <top (required)>'
+     # ./spec/helpers/home_page_helper_spec.rb:17:in `block (4 levels) in <top (required)>'
+
+  2) HomePageHelper#link_to_featured_work two records with similar arks returns the link to the correct record
+     Failure/Error: link_path = record ? solr_document_path(record['id']) : blank_search_path
+     
+     NoMethodError:
+       undefined method `solr_document_path' for #<#<Class:0x000055c29c180d30>:0x00007f95f4d55ae8>
+     # ./app/helpers/home_page_helper.rb:13:in `link_to_featured_work'
+     # ./spec/helpers/home_page_helper_spec.rb:10:in `block (3 levels) in <top (required)>'
+     # ./spec/helpers/home_page_helper_spec.rb:36:in `block (4 levels) in <top (required)>'
+
+  3) _user_util_links.html.erb displays if it is turned on
+     Failure/Error: <%= render_nav_actions do |config, action|%>
+     
+     ActionView::Template::Error:
+       undefined method `render_nav_actions' for #<#<Class:0x000055c29c180d30>:0x000055c29bfe30e0>
+       Did you mean?  render_opac_link
+     # ./app/views/_user_util_links.html.erb:6:in `_app_views__user_util_links_html_erb___4262424724100480969_47147221065840'
+     # ./spec/views/_user_util_links.html.erb_spec.rb:21:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # NoMethodError:
+     #   undefined method `render_nav_actions' for #<#<Class:0x000055c29c180d30>:0x000055c29bfe30e0>
+     #   Did you mean?  render_opac_link
+     #   ./app/views/_user_util_links.html.erb:6:in `_app_views__user_util_links_html_erb___4262424724100480969_47147221065840'
+
+  4) catalog/_bookmark_control.html.erb displays if it is turned on
+     Failure/Error: <%= form_tag(bookmark_path(document),
+     
+     ActionView::Template::Error:
+       undefined method `bookmark_path' for #<#<Class:0x000055c29c180d30>:0x000055c2a2ddcb78>
+       Did you mean?  bookmarks_export_url
+     # ./app/views/catalog/_bookmark_control.html.erb:10:in `_app_views_catalog__bookmark_control_html_erb__1772604283975837241_47147215748080'
+     # ./spec/views/catalog/_bookmark_control.html.erb_spec.rb:25:in `block (2 levels) in <top (required)>'
+     # ------------------
+     # --- Caused by: ---
+     # NoMethodError:
+     #   undefined method `bookmark_path' for #<#<Class:0x000055c29c180d30>:0x000055c2a2ddcb78>
+     #   Did you mean?  bookmarks_export_url
+     #   ./app/views/catalog/_bookmark_control.html.erb:10:in `_app_views_catalog__bookmark_control_html_erb__1772604283975837241_47147215748080'
+

@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://unpkg.com/vue"></script>
+</head>
+<body>
+  <div class="container">
+
+    <div id="app">
+      <div v-for="candidate in candidates" :key="candidate.name">
+        <h2>{{ candidate.name }}</h2>
+          <p v-for="name in candidate.candidates" :key="candidates">{{ candidate }}
+          </p>
+          <button>VOTE</button>
+      </div>
+    </div>
+
+  </div>
+
+<script>
+    new Vue({
+      el: '#app',
+      data: {
+        candidates: [
+          { name: "Violet", votes: 0 },
+          { name: "Dash", votes: 0 },
+          { name: "Jack Jack", votes: 0 },
+          { name: "Elasticgirl", votes: 0 },
+          { name: "Mr. Incredible", votes: 0 }
+        ],
+        vote: 0
+      },
+      methods: {
+        addVote() {
+          vote ++
+        }
+      }
+    })
+  </script>
+</body>
+</html>

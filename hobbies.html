@@ -8,29 +8,17 @@
 <body>
   <div class="container">
   <div id="app">
-    <p>Hello {{message}}</p>
-    {{message}}
-    <input v-model='message' placeholder='edit me'>
-    <p v-if="animal=='dog'">Dog goes woof!</p>
-    <p v-else-if="animal=='cat'">Cat goes MEOW!</p>
-    <p v-else >'What does the {{ animal }} say?'</p>
     <ul>
       <li v-for="food in favfoods">{{ food }}</li>
     </ul>
+    <hr>
+    <h1>Hobbies</h1>
     <div v-for="user in users" :key="user.name">
       <h2>{{ user.name }}</h2>
       <ul>
         <li v-for="hobbie in user.hobbies" :key="hobbies">{{ hobbie }}</li>
       </ul>
     </div>
-
-    <p v-for="candidate in  candidates">{{  candidate.name }}: {{ candidate.votes}}</p>
-      <button @click="addVote(cadidate)">VOTE</button>
-      <form>
-        Add candidate: <input name=cname" v-model="name"/><button @click.prevent="addCandidate" />
-      </form>
-    </div>
-
     </div>
   </div>
 </div>
@@ -51,19 +39,7 @@
           {name: "Lars", hobbies: ["coding", "biking","ham radio"]},
           {name: "Friendly", hobbies: ["sleeping","eating","stretching"]},
           {name: "Pikku", hobbies: ["sleeping", "eating","hiding"]}
-        ],
-        candidates: [
-          {name: "Violet", votes: 0},
-          {name: "Dash", votes: 0},
-          {name: "Jack Jack", votes: 0},
-          {name: "Elastigirl", votes: 0},
-          {name: "Mr. Incredible", votes: 0}
-      ]
-      },
-      methods: {
-        addVote(candidate){
-          candidate.vote ++
-        }
+        ]
       }
     })
   </script>

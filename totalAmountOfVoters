@@ -1,0 +1,10 @@
+totalAmountOfVoters () {
+   let voters = this.candidates.filter( function (candidate) {
+     return candidate.votes >= 0
+ })
+
+ let totalVoters = voters.reduce(function (acc, candidate) {
+     return acc + candidate.votes
+ }, 0)
+ return totalVoters
+         }

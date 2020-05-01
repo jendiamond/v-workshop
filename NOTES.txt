@@ -1,6 +1,11 @@
 https://slides.com/hootlex/1-vuejs-fundamentals-workshop-get-started-with-vue?token=1otN5Kmx
+https://slides.com/hootlex/
+3-vuejs-fundamentals-workshop-computed-filters-and-devtools?token=9M8Jb4hn 
 
+https://slides.com/hootlex/4-vuejs-fundamentals-workshop-components?token=cBpcvBBI
 https://github.com/hootlex
+
+
 Claire Oklahoma coding dojo teacher
 Greg Dallas web dev studio 
 Craig UK Cornwall helicopter pilot https://helicrewmanager.com/
@@ -19,3 +24,39 @@ Reese Graham Lake Tahoe SanFran consultant biology & comp sci - Python
   </script>
 Reactivity System
 v-model directive 2 way data binding
+
+
+<div v-click-outside='closeDropdown'>
+  <ul v-if="showDropdown" class="dropdown-menu">
+
+  </ul>
+  <button v-else @click="openDropdown">MENU</button>
+</div>
+Vue.config.keyCodes= {
+  l: 76,
+  fl:112
+}
+
+## computed vs methods
+### computed
+does not accept arguments
+never change the data
+always returns a value
+re-evaluate based on dependencies
+
+### methods 
+accepts arguement
+change the data
+returning a value is optional
+do not re-evaluate base on dependenciesn
+
+lodash.com
+
+this.candidates.concat().sort((a, b) => b.votes - a.votes) 
+
+
+
+Filters are removed in Vue 3
+implement filter functionality we use methods and computed properties
+
+no reason to use render functions
